@@ -6,8 +6,8 @@ opt.number = true
 
 
 -- 缩进
-opt.tabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
@@ -31,7 +31,7 @@ opt.splitbelow = true
 -- 搜索
 opt.ignorecase = true
 opt.smartcase = true
-
+  
 -- 外观
 opt.termguicolors = true
 opt.signcolumn = "yes"
