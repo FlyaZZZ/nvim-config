@@ -11,7 +11,7 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
-
+opt.autowrite=true
 -- 防止包裹
 opt.wrap = false
 
@@ -36,3 +36,15 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 vim.cmd[[colorscheme tokyonight-moon]]
+
+if opt.autowrite then
+    vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+        pattern = { "*" },
+        command = "silent! wall",
+        nested = true,
+    })
+end
+
+
+
+
