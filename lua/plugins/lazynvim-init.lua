@@ -16,10 +16,9 @@ plugins = {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     },
-    "sbdchd/neoformat",
     {
         'nvim-tree/nvim-tree.lua',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+        requires = {'nvim-tree/nvim-web-devicons'}
     },
     "christoomey/vim-tmux-navigator",
     "nvim-treesitter/nvim-treesitter",
@@ -45,8 +44,10 @@ plugins = {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
-
-    "akinsho/bufferline.nvim", 
+    {
+        'akinsho/bufferline.nvim', version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons'
+    },
     "lewis6991/gitsigns.nvim", 
 
 
